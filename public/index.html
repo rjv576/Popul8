@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="main">
+        <!--Radio button-->
+        <form action="/create-users" method="post">
+            <input type="radio" name="radio" value="1" onclick="toggleFields()">Individual
+            <input type="radio" name="radio" value="2" onclick="toggleFields()">Bulk
+            <br><br>
+            <div class="individual-fields" id="individual-fields" style="display:none;">
+                <div class="independiente">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br>
+                    <!--Birthday selection-->
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday"><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password"><br>
+                </div>
+                
+                <div class="genero">
+                    <label for="sex">Gender:</label><br>
+                    <input type="radio" id="male" name="sex" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label for="female">Female</label><br>
+                </div>
+                <input type="submit" name="submit" value="Submit">
+            </div>
+            <div id="bulk-fields" style="display:none;">
+                <label for="quantity">Number of Users:</label>
+                <input type="number" id="quantity" name="quantity" min="1"><br>
+                <input type="submit" name="submit" value="Submit">
+            </div>   
+        </form>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>
